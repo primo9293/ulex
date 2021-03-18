@@ -12,6 +12,7 @@ import { AuthRoutingModule } from './auth.routing';
   imports: [
     CommonModule,
     RouterModule,
+    RouterModule,
     AuthRoutingModule
   ],
   exports: [

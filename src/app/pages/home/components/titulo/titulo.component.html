@@ -1,0 +1,12 @@
+<div class="titulo">
+    <p>{{titulo}}</p>
+    <!-- <p>Titulo</p> -->
+</div>
+<div *ngFor="let dato of datosImprim">
+    <div *ngIf="dato.kind === 1">
+        <app-kindone [produc]="dato"></app-kindone>
+    </div>
+    <div *ngIf="dato.kind === 2">
+        <app-kindtwo [produc]="dato"></app-kindtwo>
+    </div>
+</div>

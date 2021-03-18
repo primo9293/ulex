@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+html,
+body {
+    margin: 0%;
+}
+
+.conta {
+    display: flex;
+}
+
+.caja {
+    display: block;
+    width: 100%;
+    height: 400px;
+    padding: 0px 0px 5px 0px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 3px 0px #BDBEC0;
+}
+
+.imagen {
+    width: 100%;
+    height: 300px;
+    margin: 0px;
+    border-bottom: 1px #BDBEC0 solid;
+}
+
+.imagen img {
+    width: 100%;
+    height: 100%;
+}
+
+.contened {
+    display: flex;
+    width: 100%;
+    height: 100px
+}
+
+.texto {
+    display: inline-block;
+}
+
+.boton {
+    display: inline-block;
+}
+
+.div1 {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    line-height: 20px;
+}
+
+.titulo {
+    display: flex;
+    align-items: flex-end;
+    margin-left: 25px;
+    font-family: 'Rubik', sans-serif;
+}
+
+.precio {
+    display: flex;
+    align-items: flex-start;
+    margin: 2px 0px 0px 25px;
+    color: #616263;
+    font-weight: bold;
+}
+
+.div2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100%;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    background: #1889F4;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: 'Rubik', sans-serif;
+    font-size: 11px;
+    margin-right: 25px;
+}

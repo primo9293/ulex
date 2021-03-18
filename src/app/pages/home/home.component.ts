@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Categories } from 'src/app/models/categorie.interface';
+import { Productos } from 'src/app/models/producto.interface';
+import { ProductosService } from '../../services/productos.service';
+
+
 
 @Component({
   selector: 'app-home',
@@ -7,12 +12,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
  
+  categories: Categories[] = [];
+  products: Productos[] = []
 
-  constructor(){
+  datos:any
+
+  constructor(private productosService: ProductosService){
     }
 
   ngOnInit(): void {
+    this.obtenerDatosPrCa()
+  }
 
+  obtenerDatosPrCa(){
+    this.productosService.getCategoyProduc()
+      .subscribe( (resp: any) => {
+         this.categories = resp.categories
+        this.products = resp.products
+        // console.log('this.categories',this.categories);
+        // console.log('this.products',this.products);
+        this.cargarDatos(this.categories, this.products)
+      })
+  }
+
+  cargarDatos(categories: Categories[], products: Productos[]){
+    this.datos = this.categories.sort((a, b) => a.ordinal - b.ordinal)
   }
 
 

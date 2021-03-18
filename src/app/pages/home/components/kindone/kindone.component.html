@@ -1,0 +1,18 @@
+<div class="conta">
+    <div class="caja">
+        <div class="imagen">
+            <img [src]="producto.ean | noimage : producto.kind" alt="">
+        </div>
+        <div class="texto">
+            <div class="titulo">
+                {{producto.name}}
+            </div>
+            <div class="precio">
+                {{producto.price | currency:'$':'symbol':'4.0-0'}}
+            </div>
+        </div>
+        <div class="boton">
+            <a class="button">Comprar</a>
+        </div>
+    </div>
+</div>
